@@ -1,1 +1,59 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 
+body{
+    text-align: center;
+    background-color: rgb(200, 246, 245);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset{
+    padding: 30px;
+    font-size: 28px;
+}
+
+input{
+    height: 45px;
+    font-size: 28px;
+}
+
+textarea{
+    width: 60%;
+    height: 40px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+}
+
+.btn,.content{
+    position: relative;
+    top: -13px;
+}
+
+.item{
+    width: 30%;
+    /* display:  flex; */
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
+.blog-post1{
+    min-width: 30%;
+    min-height: 30%;
+    border: 1px solid red;
+}
+
+.item_child2{
+    width: 90%;
+    height: auto;
+    display: flex;
+    border: 1px solid blue;
+}

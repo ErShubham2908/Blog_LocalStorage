@@ -4,18 +4,22 @@ const authorInput = document.querySelector('#author');
 const dateInput = document.querySelector('#date');
 const contentInput = document.querySelector('#content');
 const blogPostsDiv = document.querySelector('#blog-posts');
-let id = 0;
 let blogPosts = [];
+
+// Result section
+const resultTitle = document.querySelector('#result_title')
+const resultContent = document.getElementById('result_content')
+const resultDate = document.getElementById('result_date')
+const resultAuthor = document.querySelector('#result_author')
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  id = id + 1;
   const title = titleInput.value;
   const author = authorInput.value;
   const date = dateInput.value;
   const content = contentInput.value;
 
-  const blogPost = { id, title, author, date, content};
+  const blogPost = { title, author, date, content};
   blogPosts.push(blogPost);
 
   localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
@@ -32,9 +36,6 @@ function renderBlogPosts() {
     const blogPostDiv = document.createElement('div');
     blogPostDiv.classList.add('blog-post');
 
-    const idElement = document.createElement('h1');
-    idElement.textContent = blogPost.id;
-
     const titleElement = document.createElement('h1');
     titleElement.textContent = blogPost.title;
 
@@ -47,13 +48,18 @@ function renderBlogPosts() {
     const contentElement = document.createElement('p');
     contentElement.textContent = blogPost.content;
 
-    blogPostDiv.appendChild(idElement);
+    
     blogPostDiv.appendChild(titleElement);
     blogPostDiv.appendChild(authorElement);
     blogPostDiv.appendChild(dateElement);
     blogPostDiv.appendChild(contentElement);
 
     blogPostsDiv.appendChild(blogPostDiv);
+
+    // resultTitle.textContent += blogPost.title
+    // resultContent.textContent += blogPost.content
+    // resultDate.textContent += blogPost.date
+    // resultAuthor.textContent += blogPost.author
   });
 }
 

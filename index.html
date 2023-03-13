@@ -13,20 +13,28 @@
       <div class="item_child1">
         <h1>My Blog Project</h1>
         <form class="item_form">
-          <label for="title">Title:</label>
-          <input autocomplete="true" type="text"  id="title" name="title" />
-          <label for="author">Author:</label>
-          <input type="text" autocomplete="true" id="author" name="author" />
-          <label for="date">Post Date</label>
-          <input type="date" id="date"  name="date" /> <br />
-          <label for="content">Content:</label>
-          <textarea id="content" name="content" rows="2" cols="20"></textarea>
-          <button type="submit">Add Blog Post</button>
+          <fieldset>
+  <legend>Fill Your Blog Details</legend>
+            <label for="title">Title:</label>
+            <input autocomplete="true" type="text"  id="title" name="title" />
+            <label for="author">Author:</label>
+            <input type="text" autocomplete="true" id="author" name="author" />
+            <label for="date">Date:</label>
+            <input type="date" id="date"  name="date" /> <br /><br/>
+            <label class="content" for="content">Content:</label>
+            <textarea id="content" name="content" rows="2" cols="20"></textarea>
+            <button type="submit" class="btn">Add Blog Post</button>
+       
+          </fieldset>
         </form>
       </div>
       <div class="item_child2">
-        <div class="item">
-          <div id="blog-posts"></div>
+        <div class="blog-posts">
+          <!-- <h1 id="result_title"></h1>
+          <p id="result_content"></p>
+          <h3 id="result_date"></h3>
+          <h2 id="result_author"></h2> -->
+        </div>
         </div>
       </div>
     </div>
